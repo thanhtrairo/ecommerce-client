@@ -1,18 +1,18 @@
 import { create } from 'zustand'
 
-import { Product } from '~/lib/types'
+import { TProduct } from '~/lib/types'
 
 type PreviewModalStore = {
   isOpen: boolean
-  data?: Product
-  onOpen: (data: Product) => void
+  data?: TProduct
+  onOpen: (data: TProduct) => void
   onClose: () => void
 }
 
 const usePreviewModal = create<PreviewModalStore>((set) => ({
   isOpen: false,
   data: undefined,
-  onOpen: (data: Product) => set({ isOpen: true, data }),
+  onOpen: (data: TProduct) => set({ isOpen: true, data }),
   onClose: () => set({ isOpen: false }),
 }))
 

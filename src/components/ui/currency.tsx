@@ -7,7 +7,7 @@ const formatter = new Intl.NumberFormat('en-US', {
   currency: 'USD',
 })
 
-interface CurrencyProps {
+type CurrencyProps = {
   value?: string | number
 }
 

@@ -1,7 +1,7 @@
-import { Billboard } from '~/lib/types'
+import { TBillboard } from '~/lib/types'
 
 type BillboardProps = {
-  data: Billboard | null
+  data?: TBillboard
 }
 
 const Billboard: React.FC<BillboardProps> = ({ data }) => {

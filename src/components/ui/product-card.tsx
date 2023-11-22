@@ -8,10 +8,10 @@ import { useRouter } from 'next/navigation'
 import Currency from '~/components/ui/currency'
 import IconButton from '~/components/ui/icon-button'
 import { usePreviewModal, useCart } from '~/hooks'
-import { Product } from '~/lib/types'
+import { TProduct } from '~/lib/types'
 
-interface ProductCard {
-  data: Product
+type ProductCard = {
+  data: TProduct
 }
 
 const ProductCard: React.FC<ProductCard> = ({ data }) => {

@@ -1,10 +1,10 @@
 import ProductCard from '~/components/ui/product-card'
 import NoResults from '~/components/ui/no-results'
-import { Product } from '~/lib/types'
+import { TProduct } from '~/lib/types'
 
 type ProductListProps = {
   title: string
-  items: Product[]
+  items: TProduct[]
 }
 
 const ProductList: React.FC<ProductListProps> = ({ title, items }) => {

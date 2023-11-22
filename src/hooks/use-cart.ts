@@ -2,11 +2,11 @@ import { create } from 'zustand'
 import { toast } from 'react-hot-toast'
 import { persist, createJSONStorage } from 'zustand/middleware'
 
-import { Product } from '~/lib/types'
+import { TProduct } from '~/lib/types'
 
 type CartStore = {
-  items: Product[]
-  addItem: (data: Product) => void
+  items: TProduct[]
+  addItem: (data: TProduct) => void
   removeItem: (id: string) => void
   removeAll: () => void
 }
@@ -15,7 +15,7 @@ const useCart = create(
   persist<CartStore>(
     (set, get) => ({
       items: [],
-      addItem: (data: Product) => {
+      addItem: (data: TProduct) => {
         const currentItems = get().items
         const existingItem = currentItems.find((item) => item.id === data.id)
 
